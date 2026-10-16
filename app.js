@@ -7,10 +7,12 @@
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   /* ---------------- idioma (PT / EN) ---------------- */
+  $$(".shot").forEach((im) => { im.dataset.ptAlt = im.alt; });
   const i18nNodes = $$("[data-en]");
   i18nNodes.forEach((n) => { n.dataset.pt = n.innerHTML; });
   const labelNodes = $$("[data-en-label]");
   labelNodes.forEach((n) => { n.dataset.ptLabel = n.getAttribute("aria-label") || ""; });
+  const CAPS = { pt: ["Versão desktop · Python", "Versão web · React + FastAPI"], en: ["Desktop version · Python", "Web version · React + FastAPI"] };
   const T = {
     pt: { title: "Diego Murari | Desenvolvedor Full Stack", clear: "Limpar filtro", copy: "Copiar e-mail", copied: "E-mail copiado", sound: "Ver a demonstração completa com som", quiet: "Voltar ao modo silencioso", steps: ["A chegar", "Na portaria", "No pátio", "Descarregando", "Concluído"] },
     en: { title: "Diego Murari | Full Stack Developer", clear: "Clear filter", copy: "Copy e-mail", copied: "E-mail copied", sound: "Watch full demo with sound", quiet: "Back to silent mode", steps: ["Expected", "At the gate", "In the yard", "Unloading", "Done"] },
@@ -24,6 +26,8 @@
     $$("#lang span").forEach((s) => s.classList.toggle("on", s.dataset.l === l));
     document.title = T[l].title;
     try { localStorage.setItem("lang", l); } catch (e) { /* sem armazenamento */ }
+    $$(".shot").forEach((im) => { im.alt = l === "en" ? im.dataset.enAlt : im.dataset.ptAlt; });
+    paintShotCap();
     renderChips();
     refreshSound();
     paintBoard();
@@ -160,6 +164,18 @@
     }
   }
   renderChips();
+
+  // carrossel das telas do DXF
+  const shots = $$(".shot");
+  let shotIx = 0;
+  function paintShotCap() { const cap = $("#dxfCap"); if (cap) cap.textContent = CAPS[lang][shotIx]; }
+  paintShotCap();
+  setInterval(() => {
+    if (!medias["v-dxf"].classList.contains("is-on") || reduce) return;
+    shotIx = (shotIx + 1) % shots.length;
+    shots.forEach((s, k) => s.classList.toggle("on", k === shotIx));
+    paintShotCap();
+  }, 3800);
 
   /* ---------------- revelar ao rolar ---------------- */
   const reveal = $$(".about h2, .prose p, .facts div, .projects-intro > *, .jobs > li, .stack, .edu, .contact h2, .contact .lead, .contact .cta, .mailline");

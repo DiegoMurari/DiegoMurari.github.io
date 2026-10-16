@@ -100,14 +100,10 @@
         <div class="stage-frame">
           <video id="v-nexus" class="media is-on" muted loop playsinline preload="none" poster="assets/media/nexusops-poster.jpg" data-src="assets/media/nexusops.mp4"></video>
           <video id="v-receb" class="media" muted loop playsinline preload="none" poster="assets/media/recebimento-poster.jpg" data-src="assets/media/recebimento.mp4"></video>
-          <div id="v-dxf" class="media dxf" aria-label="Ilustração de camadas de um desenho técnico" data-en-label="Illustration of technical drawing layers">
-            <svg viewBox="0 0 640 400" role="img" aria-hidden="true">
-              <g fill="none" stroke-linejoin="round" stroke-linecap="round">
-                <g class="l3" transform="translate(120 20)"><path d="M0 120l200-70 300 90-200 70z" stroke="#12141a" stroke-width="2.4" fill="#ffc400"/><path d="M110 125l80-26 150 46" stroke="#12141a" stroke-width="2"/><circle cx="260" cy="140" r="26" stroke="#12141a" stroke-width="2"/></g>
-                <g class="l2" transform="translate(120 90)"><path d="M0 120l200-70 300 90-200 70z" stroke="#12141a" stroke-width="2.4" fill="#f6f7f9"/><path d="M60 128l220-66M120 148l220-66M180 168l220-66" stroke="#12141a" stroke-width="1.6"/></g>
-                <g class="l1" transform="translate(120 160)"><path d="M0 120l200-70 300 90-200 70z" stroke="#12141a" stroke-width="2.4" fill="#12141a"/><path d="M40 130l180-56 260 80" stroke="#ffc400" stroke-width="2"/><path d="M120 160h140M280 150h90" stroke="#ffc400" stroke-width="2"/></g>
-              </g>
-            </svg>
+          <div id="v-dxf" class="media dxf" role="group" aria-label="Capturas de tela do DXF Reader" data-en-label="DXF Reader screenshots">
+            <img class="shot on" src="assets/img/dxf-desktop.jpg" alt="DXF Reader desktop: mapa técnico com camadas e ferramentas de medição" data-en-alt="DXF Reader desktop: technical map with layers and measuring tools" width="1909" height="1036" loading="lazy">
+            <img class="shot" src="assets/img/dxf-web.jpg" alt="DXF Reader web: painel com os serviços de mapas" data-en-alt="DXF Reader web: dashboard with the map services" width="1919" height="942" loading="lazy">
+            <span class="shot-cap" id="dxfCap"></span>
           </div>
         </div>
         <div class="stage-bar">
@@ -135,7 +131,7 @@
         <li class="item" data-media="v-dxf" data-tags="React,TypeScript,Python,FastAPI,PostgreSQL">
           <h3>DXF Reader Web</h3>
           <p class="sub" data-en="Reading and viewing technical drawing files (DXF)">Leitura e visualização de arquivos de desenho técnico (DXF)</p>
-          <p data-en="React interface with reusable components, a FastAPI back end and PostgreSQL. It grew from a Python desktop version into a web platform for interactive DXF viewing, with reports and dashboards.">Interface em React com componentes reutilizáveis, back-end em FastAPI e PostgreSQL. Nasceu como uma versão desktop em Python e virou uma plataforma web de visualização interativa de DXF, com relatórios e dashboards.</p>
+          <p data-en="It started as a Python desktop app that reads DXF files, shows the layers, measures distances and generates the PDF layout. Then it became a web platform: React interface with reusable components, FastAPI back end and PostgreSQL.">Nasceu como um app desktop em Python que lê arquivos DXF, mostra as camadas, mede distâncias e gera o layout em PDF. Depois virou uma plataforma web: interface em React com componentes reutilizáveis, back-end em FastAPI e PostgreSQL.</p>
           <p data-en="Cut report generation time by 50% and data interpretation errors by 25%.">Reduziu em 50% o tempo de geração de relatórios e em 25% os erros de interpretação de dados.</p>
           <ul class="tags"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>PostgreSQL</li></ul>
         </li>
