@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diego Murari | Desenvolvedor Full Stack</title>
+<meta name="description" content="Diego Murari, desenvolvedor Full Stack (Java, Angular, TypeScript). Sistemas completos do banco de dados à tela. Disponível para vagas remotas.">
+<meta name="theme-color" content="#ffc400">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Diego Murari | Desenvolvedor Full Stack">
+<meta property="og:description" content="Java, Angular e TypeScript. Sistemas completos, do banco de dados à tela.">
+<meta property="og:image" content="https://diegomurari.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://diegomurari.github.io/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Diego de Oliveira Murari Guimarães","alternateName":"Diego Murari","jobTitle":"Desenvolvedor Full Stack","url":"https://diegomurari.github.io/","email":"mailto:diego_murari@hotmail.com","telephone":"+55 16 98173-5308","address":{"@type":"PostalAddress","addressLocality":"Franca","addressRegion":"SP","addressCountry":"BR"},"sameAs":["https://github.com/DiegoMurari","https://www.linkedin.com/in/diego-murari"],"knowsAbout":["Java","Spring Boot","Angular","TypeScript","React","PostgreSQL","Docker"]}</script>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/big-shoulders-display-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/schibsted-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#projetos" data-en="Skip to projects">Ir para os projetos</a>
+
+<!-- Trilha: um caminhão avança conforme a página rola -->
+<header class="track" aria-label="Navegação">
+  <a class="brand" href="#topo" aria-label="Diego Murari">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#12141a"/><path d="M8 22V10h5.2c4.2 0 6.3 2.3 6.3 6s-2.1 6-6.3 6zM23 22V10l4 7 4-7v12" transform="translate(-3 0) scale(.92)" fill="none" stroke="#ffc400" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/></svg>
+  </a>
+  <nav class="stations" id="stations">
+    <a href="#topo" data-station="0"><span data-en="Arrival">Chegada</span></a>
+    <a href="#sobre" data-station="1"><span data-en="About">Conferência</span></a>
+    <a href="#projetos" data-station="2"><span data-en="Projects">Descarga</span></a>
+    <a href="#experiencia" data-station="3"><span data-en="Experience">Estoque</span></a>
+    <a href="#contato" data-station="4"><span data-en="Contact">Saída</span></a>
+    <div class="rail" aria-hidden="true"><i class="rail-fill" id="railFill"></i>
+      <svg class="truck" id="truck" viewBox="0 0 64 34" width="40" height="22"><path d="M2 6h38v18H2zM40 12h12l8 8v4H40z" fill="#12141a"/><path d="M45 14.5h6.2l4.3 4.7H45z" fill="#ffc400"/><circle cx="14" cy="27" r="5" fill="#ffc400" stroke="#12141a" stroke-width="3"/><circle cx="50" cy="27" r="5" fill="#ffc400" stroke="#12141a" stroke-width="3"/></svg>
+    </div>
+  </nav>
+  <button class="lang" id="lang" type="button" aria-label="Mudar idioma / Change language"><span class="on" data-l="pt">PT</span><span data-l="en">EN</span></button>
+</header>
+
+<main id="topo">
+  <!-- 1. CHEGADA -->
+  <section class="hero" aria-labelledby="h-nome">
+    <div class="hero-copy">
+      <p class="status"><i class="dot" aria-hidden="true"></i><span data-en="Open to remote developer roles">Aberto a vagas de desenvolvedor, remoto</span></p>
+      <h1 id="h-nome">Diego<br>Murari</h1>
+      <p class="role" data-en="Full Stack Developer">Desenvolvedor Full Stack</p>
+      <p class="lead" data-en="Java, Angular and TypeScript. I build complete systems, from the database to the screen, and prove them with tests.">Java, Angular e TypeScript. Construo sistemas completos, do banco de dados à tela, e provo com testes.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projetos" data-en="See the projects">Ver os projetos</a>
+        <a class="btn" href="https://wa.me/5516981735308" target="_blank" rel="noopener" data-en="Talk on WhatsApp">Falar no WhatsApp</a>
+        <a class="btn ghost" href="assets/Curriculo_Diego_Murari.pdf" download data-en="Download CV">Baixar currículo</a>
+      </div>
+    </div>
+
+    <aside class="board" aria-label="Exemplo ilustrativo de painel" data-en-label="Illustrative dashboard example">
+      <header class="board-head">
+        <span data-en="Yard board">Painel de pátio</span>
+        <span class="synthetic" data-en="illustrative example">exemplo ilustrativo</span>
+      </header>
+      <ol class="loads" id="loads"></ol>
+      <footer class="board-foot">
+        <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <span data-en="The kind of system I build: every step recorded, with who and when.">O tipo de sistema que eu construo: cada etapa registrada, com quem e quando.</span>
+      </footer>
+    </aside>
+  </section>
+
+  <div class="tape" aria-hidden="true"></div>
+
+  <!-- 2. CONFERÊNCIA -->
+  <section class="about" id="sobre" aria-labelledby="h-sobre">
+    <h2 id="h-sobre" data-en="From the data model to the interface, in one pair of hands.">Do modelo de dados à interface, nas mesmas mãos.</h2>
+    <div class="about-grid">
+      <div class="prose">
+        <p data-en="I'm a Full Stack developer with experience in RESTful APIs (Spring Boot, NestJS and FastAPI), interfaces in Angular and React and PostgreSQL. I like systems where the rules matter: the calculation has to match the spreadsheet, the invoice has to match the booking, the report has to match reality.">Sou desenvolvedor Full Stack com experiência em APIs RESTful (Spring Boot, NestJS e FastAPI), interfaces em Angular e React e PostgreSQL. Gosto de sistemas onde a regra importa: a conta precisa bater com a planilha, a nota precisa bater com o agendamento, o relatório precisa bater com a realidade.</p>
+        <p data-en="I've delivered dashboards, payment and digital signature integrations and Python automations, with measured gains in time and quality. I keep personal projects as open source on GitHub.">Já entreguei dashboards, integrações de pagamento e assinatura digital e automações em Python, com ganhos medidos de tempo e de qualidade. Mantenho projetos próprios com código aberto no GitHub.</p>
+      </div>
+      <dl class="facts">
+        <div><dt data-en="Based in">Base</dt><dd>Franca, SP, Brasil</dd></div>
+        <div><dt data-en="Looking for">Procuro</dt><dd data-en="Developer roles, remote preferred">Vagas de desenvolvedor, de preferência remoto</dd></div>
+        <div><dt data-en="Studying">Estudo</dt><dd data-en="Software Engineering, Uni-FACEF (2026)">Engenharia de Software, Uni-FACEF (2026)</dd></div>
+        <div><dt data-en="Languages">Idiomas</dt><dd data-en="English advanced, Portuguese native">Inglês avançado, português nativo</dd></div>
+        <div><dt data-en="In preparation">Em preparação</dt><dd>AWS Solutions Architect Associate</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- 3. DESCARGA: projetos -->
+  <section class="projects" id="projetos" aria-labelledby="h-proj">
+    <div class="projects-intro">
+      <h2 id="h-proj" data-en="Three systems, running.">Três sistemas, rodando.</h2>
+      <p data-en="Filter by technology to see where each one shows up." >Filtre por tecnologia para ver onde cada uma aparece.</p>
+      <div class="chips" id="chips" role="group" aria-label="Filtrar por tecnologia" data-en-label="Filter by technology"></div>
+    </div>
+
+    <div class="stage-wrap">
+      <div class="stage" id="stage" aria-hidden="false">
+        <div class="stage-frame">
+          <video id="v-nexus" class="media is-on" muted loop playsinline preload="none" poster="assets/media/nexusops-poster.jpg" data-src="assets/media/nexusops.mp4"></video>
+          <video id="v-receb" class="media" muted loop playsinline preload="none" poster="assets/media/recebimento-poster.jpg" data-src="assets/media/recebimento.mp4"></video>
+          <div id="v-dxf" class="media dxf" aria-label="Ilustração de camadas de um desenho técnico" data-en-label="Illustration of technical drawing layers">
+            <svg viewBox="0 0 640 400" role="img" aria-hidden="true">
+              <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+                <g class="l3" transform="translate(120 20)"><path d="M0 120l200-70 300 90-200 70z" stroke="#12141a" stroke-width="2.4" fill="#ffc400"/><path d="M110 125l80-26 150 46" stroke="#12141a" stroke-width="2"/><circle cx="260" cy="140" r="26" stroke="#12141a" stroke-width="2"/></g>
+                <g class="l2" transform="translate(120 90)"><path d="M0 120l200-70 300 90-200 70z" stroke="#12141a" stroke-width="2.4" fill="#f6f7f9"/><path d="M60 128l220-66M120 148l220-66M180 168l220-66" stroke="#12141a" stroke-width="1.6"/></g>
+                <g class="l1" transform="translate(120 160)"><path d="M0 120l200-70 300 90-200 70z" stroke="#12141a" stroke-width="2.4" fill="#12141a"/><path d="M40 130l180-56 260 80" stroke="#ffc400" stroke-width="2"/><path d="M120 160h140M280 150h90" stroke="#ffc400" stroke-width="2"/></g>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="stage-bar">
+            <button type="button" class="soundbtn" id="soundBtn" data-en="Watch full demo with sound">Ver a demonstração completa com som</button>
+          </div>
+      </div>
+
+      <ol class="items" id="items">
+        <li class="item" data-media="v-nexus" data-tags="Java,Spring Boot,Angular,PostgreSQL,Redis,Docker,JWT,TypeScript">
+          <h3>NexusOps</h3>
+          <p class="sub" data-en="Service Desk and IT Operations platform">Plataforma de Service Desk e Operações de TI</p>
+          <p data-en="Requester portal and analyst console in a single flow: ticket opening, triage, assignment and reply. Routing rules with a simulator, SLA configurable by type and priority, and webhooks to integrate with other systems.">Portal do solicitante e console do analista em um fluxo único: abertura, triagem, atribuição e resposta de chamados. Regras de roteamento com simulador, SLA configurável por tipo e prioridade e webhooks para integrar com outros sistemas.</p>
+          <p data-en="Modular back end in Java 21 and Spring Boot 3 (Spring Modulith), Angular 17+ front end, PostgreSQL 16, Redis 7, JWT and Docker.">Back-end modular em Java 21 e Spring Boot 3 (Spring Modulith), front-end em Angular 17+, PostgreSQL 16, Redis 7, JWT e Docker.</p>
+          <ul class="tags"><li>Java 21</li><li>Spring Boot</li><li>Angular</li><li>PostgreSQL</li><li>Redis</li><li>Docker</li></ul>
+          <a class="more" href="https://github.com/DiegoMurari/NexusOps" target="_blank" rel="noopener" data-en="Source code on GitHub">Código no GitHub</a>
+        </li>
+        <li class="item" data-media="v-receb" data-tags="Next.js,TypeScript,SQLite,Vitest">
+          <h3>Recebimento Inteligente</h3>
+          <p class="sub" data-en="Scheduling and control of cargo receiving">Agendamento e controle de recebimento de cargas</p>
+          <p data-en="The whole flow, built alone: supplier signup and approval, unloading booking with automatic invoice (NF-e XML) reading, invoice check at the gate, unloading control and a dashboard that projects staff and cost.">O fluxo inteiro, feito sozinho: cadastro e aprovação de fornecedores, agendamento de descarga com leitura automática da NF-e (XML), conferência na portaria, controle da descarga e painel que projeta equipe e custo.</p>
+          <p data-en="Calculations validated against a reference spreadsheet, exact decimal values, over 650 automated tests, and the main flow works offline.">Cálculos validados contra planilha de referência, valores em decimal exato, mais de 650 testes automatizados e fluxo principal que funciona sem internet.</p>
+          <ul class="tags"><li>Next.js</li><li>TypeScript</li><li>SQLite</li><li>Drizzle</li><li>Vitest</li></ul>
+          <a class="more" href="https://github.com/DiegoMurari/Agroivia" target="_blank" rel="noopener" data-en="Source code on GitHub">Código no GitHub</a>
+        </li>
+        <li class="item" data-media="v-dxf" data-tags="React,TypeScript,Python,FastAPI,PostgreSQL">
+          <h3>DXF Reader Web</h3>
+          <p class="sub" data-en="Reading and viewing technical drawing files (DXF)">Leitura e visualização de arquivos de desenho técnico (DXF)</p>
+          <p data-en="React interface with reusable components, a FastAPI back end and PostgreSQL. It grew from a Python desktop version into a web platform for interactive DXF viewing, with reports and dashboards.">Interface em React com componentes reutilizáveis, back-end em FastAPI e PostgreSQL. Nasceu como uma versão desktop em Python e virou uma plataforma web de visualização interativa de DXF, com relatórios e dashboards.</p>
+          <p data-en="Cut report generation time by 50% and data interpretation errors by 25%.">Reduziu em 50% o tempo de geração de relatórios e em 25% os erros de interpretação de dados.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Python</li><li>FastAPI</li><li>PostgreSQL</li></ul>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <div class="tape" aria-hidden="true"></div>
+
+  <!-- 4. ESTOQUE: experiência -->
+  <section class="exp" id="experiencia" aria-labelledby="h-exp">
+    <h2 id="h-exp" data-en="Where I've shipped.">Onde eu entreguei.</h2>
+    <ul class="jobs">
+      <li>
+        <details open>
+          <summary>
+            <span class="role-name" data-en="Backend Developer (contractor) <b>CroSoften</b>">Desenvolvedor Backend (PJ) <b>CroSoften</b></span>
+            <time data-en="Sep 2025 – Feb 2026">Set 2025 – Fev 2026</time>
+          </summary>
+          <ul class="did">
+            <li data-en="RESTful APIs in NestJS/TypeScript, with JWT authentication, payments with Mercado Pago and digital signature with ZapSign.">APIs RESTful em NestJS/TypeScript, com autenticação JWT, pagamentos com Mercado Pago e assinatura digital com ZapSign.</li>
+            <li data-en="Data modeling and query optimization with PostgreSQL and Prisma in production.">Modelagem de dados e otimização de consultas com PostgreSQL e Prisma em produção.</li>
+            <li data-en="APIs documented in Swagger/OpenAPI and validated with Postman; Docker and Gitflow.">APIs documentadas em Swagger/OpenAPI e validadas com Postman; Docker e Gitflow.</li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <span class="role-name" data-en="Development Intern <b>Usina Cevasa</b>">Estagiário de Desenvolvimento <b>Usina Cevasa</b></span>
+            <time data-en="Jan 2025 – Aug 2025">Jan 2025 – Ago 2025</time>
+          </summary>
+          <ul class="did">
+            <li data-en="DXF processing platform that cut report generation time by 50%.">Plataforma de processamento de DXF que reduziu em 50% o tempo de geração de relatórios.</li>
+            <li data-en="Interactive React dashboards, cutting data interpretation errors by 25%.">Dashboards interativos em React, reduzindo em 25% os erros de interpretação de dados.</li>
+            <li data-en="FastAPI APIs with a 35% response time gain and automated Excel/PDF reports, cutting manual effort by 40%.">APIs FastAPI com ganho de 35% no tempo de resposta e relatórios Excel/PDF automatizados, reduzindo em 40% o esforço manual.</li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details>
+          <summary>
+            <span class="role-name" data-en="Network Analyst <b>Telefônica</b>">Analista de Redes (CLT) <b>Telefônica</b></span>
+            <time data-en="Feb 2026 – Present">Fev 2026 – Atual</time>
+          </summary>
+          <ul class="did">
+            <li data-en="Python automation of operational routines, cutting manual effort on repetitive tasks.">Automação de rotinas operacionais em Python, reduzindo o esforço manual em tarefas repetitivas.</li>
+            <li data-en="Zabbix monitoring integrated with Grafana dashboards; incident coordination through ServiceNow.">Monitoramento no Zabbix integrado a dashboards no Grafana; coordenação de incidentes via ServiceNow.</li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+
+    <div class="stack" aria-label="Tecnologias" data-en-label="Technologies">
+      <h3 data-en="What I work with">Com o que eu trabalho</h3>
+      <dl>
+        <div><dt data-en="Languages">Linguagens</dt><dd>Java 21 · TypeScript · JavaScript · Python · SQL</dd></div>
+        <div><dt>Back-end</dt><dd>Spring Boot · Spring Modulith · NestJS · FastAPI · Node.js · JWT · OpenAPI</dd></div>
+        <div><dt>Front-end</dt><dd>Angular 17+ · React · Next.js · HTML · CSS · Design System</dd></div>
+        <div><dt data-en="Data and tests">Dados e testes</dt><dd>PostgreSQL · SQLite · Redis · Prisma · Drizzle · JUnit · Mockito · Vitest</dd></div>
+        <div><dt data-en="Tools">Ferramentas</dt><dd>Docker · Git · GitHub · AWS · Linux · Postman · Grafana</dd></div>
+      </dl>
+    </div>
+
+    <div class="edu">
+      <h3 data-en="Education and achievements">Formação e conquistas</h3>
+      <p class="edu-main"><b data-en="Bachelor's in Software Engineering">Bacharelado em Engenharia de Software</b> <span>Uni-FACEF · Franca, SP · <time data-en="2023 – 2026 (expected)">2023 – 2026 (previsto)</time></span></p>
+      <ul>
+        <li data-en="3rd place in the 28-hour Uni-FACEF Hackathon, out of 16 teams.">3º lugar no Hackathon de 28 horas da Uni-FACEF, entre 16 equipes.</li>
+        <li data-en="AWS Summit São Paulo 2025 attendee.">Participação no AWS Summit São Paulo 2025.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. SAÍDA: contato -->
+  <section class="contact" id="contato" aria-labelledby="h-contato">
+    <h2 id="h-contato" data-en="Got a role that needs a developer?">Tem uma vaga que precisa de um dev?</h2>
+    <p class="lead" data-en="I answer fast. WhatsApp is the quickest way." >Respondo rápido. O WhatsApp é o caminho mais curto.</p>
+    <div class="cta big">
+      <a class="btn primary" href="https://wa.me/5516981735308" target="_blank" rel="noopener">WhatsApp · (16) 98173-5308</a>
+      <button class="btn" id="copyMail" type="button" data-mail="diego_murari@hotmail.com"><span id="copyLabel" data-en="Copy e-mail">Copiar e-mail</span></button>
+      <a class="btn" href="https://www.linkedin.com/in/diego-murari" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/DiegoMurari" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="mailline"><a href="mailto:diego_murari@hotmail.com">diego_murari@hotmail.com</a></p>
+    <div class="road" aria-hidden="true"><svg class="leaving" viewBox="0 0 64 34"><path d="M2 6h38v18H2zM40 12h12l8 8v4H40z"/><path d="M45 14.5h6.2l4.3 4.7H45z"/><circle cx="14" cy="27" r="5"/><circle cx="50" cy="27" r="5"/></svg></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>© <span id="year">2026</span> Diego de Oliveira Murari Guimarães</span>
+  <a href="#topo" data-en="Back to top">Voltar ao topo</a>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>

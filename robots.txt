@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diegomurari.github.io/sitemap.xml
